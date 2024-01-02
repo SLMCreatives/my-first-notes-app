@@ -11,11 +11,8 @@ body {
 }
 
 :root {
-    color: #ffffff;
-    background: #00416A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to rileftght, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    color: #161616;
+    background: #f9f9f9;
 }
 
 .container {
@@ -30,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f9f9f9;
+    color: #151515;
 }
 
 .navbar {
@@ -157,6 +154,12 @@ body {
 .btn:hover {
     background-color: rgb(255, 255, 255);
     color:#141414;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .logo::after {
