@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-rendering: antialiased;
+}
+
+:root {
+    color: #ffffff;
+    background: #00416A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to rileftght, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9f9f9;
+}
+
+.navbar {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 350px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    transition: width 0.8s ease;
+    z-index: 4;
+}
+
+.active {
+    width: 150px; 
+    z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 45%;
+    }    
+    .active {
+        width: 50px;
+    }
+    .active .menu , 
+    .active .search ,
+    .active .logo {
+        position:relative;
+        left: -400px;
+        transition: left 5s ease;
+    }
+
+
+}
+
+.overlay {
+    position: fixed;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.238));
+    height: 100%;
+    width: 100%;
+    z-index:1;
+    transition: left 0.8s ease;
+    left: -3000px;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.overlay-active {
+    left: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.navbar li a {
+    display: block;
+    padding: 10px;
+    color: rgb(219, 219, 219);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.8s ease;
+    font-weight: 500;
+
+}
+
+.navbar li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.navbar li a:active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: rgb(50, 50, 50);
+    transition: background-color 0.8s ease;
+    color: #f9f9f9;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color:#141414;
+}
+
+.logo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+
+.toggle {
+    cursor: pointer;
+    position: absolute;
+    right: -20px;
+    color: #ffffff;
+    transition: right 0.8s ease;
+}
+
+.active .toggle {
+    color: #ffffff;
+    right: 20px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-self: flex-start;
+    margin: 20px auto;
+    padding: 20px;
+/*     background-color: #f9f9f9;
+ */    width: 70%;
+    transition: width 0.8s ease;
+    justify-content: flex-start;
+    gap: 20px;
+    left: 0px;
+    transition: left 1.5s ease;
+}
+
+.content-active {
+    left: 150px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 50px;
+
+    height: 500px;
+
+}
