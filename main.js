@@ -1,14 +1,13 @@
+
 let toggleBtn = document.querySelector('.toggle');
 let navBar = document.querySelector('.navbar');
-let object = document.querySelector('.content');
+let object = document.querySelector('.notes');
 let overlay = document.querySelector('.overlay');
 
 
 function toggleMenu() {
     navBar.classList.toggle('active');
-
-    object.classList.toggle('content-active');
-
+    object.classList.toggle('notes-active');
     overlay.classList.toggle('overlay-active');
 
     if (toggleBtn.classList.contains('fa-ellipsis-v')) {
@@ -19,3 +18,4 @@ function toggleMenu() {
 }
 
 }
+
